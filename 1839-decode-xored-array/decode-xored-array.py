@@ -1,0 +1,8 @@
+class Solution(object):
+    def decode(self, encoded, first):
+        ans = [first]
+
+        for num in encoded:
+            ans.append(ans[-1] ^ num)
+
+        return ans
